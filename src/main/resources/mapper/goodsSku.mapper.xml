@@ -30,7 +30,15 @@
     <select id="selectGoodsAndSkuByGoodId" resultMap="GoodsAndSku">
          select * from  wxb_good g join wxb_good_sku s on g.good_id=s.good_id where g.good_id = #{goodId}
     </select>
+    <sql id="params">
+         sku_id,sku_name,sku_cost,sku_price,sku_pmoney,good_id,service_money
+    </sql>
+
+    <sql id="param">
+        #{skuId},#{skuName},#{skuCost},#{skuPrice}, #{skuPmoney},#{goodId},#{serviceMoney}
+    </sql>
+
     <insert id="insertGoodSku">
-        insert into wxb_good_sku (sku_id,sku_name,sku_cost,sku_price,sku_pmoney,good_id,service_money) values (#{skuId},#{skuName},#{skuCost},#{skuPrice}, #{skuPmoney},#{goodId},#{serviceMoney})
+        insert into wxb_good_sku (<include refid="params"/>) values (<include refid="param"/>)
     </insert>
 </mapper>

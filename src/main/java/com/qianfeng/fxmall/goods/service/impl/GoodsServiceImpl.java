@@ -1,15 +1,19 @@
 package com.qianfeng.fxmall.goods.service.impl;
 
+
 import com.qianfeng.fxmall.commons.info.SystemConstantsUtils;
 import com.qianfeng.fxmall.goods.bean.WxbGood;
 import com.qianfeng.fxmall.goods.dao.IGoodsDao;
-import com.qianfeng.fxmall.goods.dao.impl.GoodsDaoImpl;
 import com.qianfeng.fxmall.goods.service.IGoodsService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
-
+@Component
 public class GoodsServiceImpl implements IGoodsService {
-    private IGoodsDao goodsDao = new GoodsDaoImpl();
+    @Autowired
+    private IGoodsDao goodsDao;
+
 
     @Override
     public void insertGoods(WxbGood wxbGood) {

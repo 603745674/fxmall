@@ -3,9 +3,8 @@ package com.qianfeng.fxmall.goods.controller;
 import com.qianfeng.fxmall.commons.info.Constants;
 import com.qianfeng.fxmall.commons.info.SaveFile;
 import com.qianfeng.fxmall.commons.info.SystemConstantsUtils;
-import com.qianfeng.fxmall.commons.mybatis.MyBatisSessionFactoryUtils;
+//import com.qianfeng.fxmall.commons.mybatis.MyBatisSessionFactoryUtils;
 import com.qianfeng.fxmall.goods.bean.WxbGood;
-import com.qianfeng.fxmall.goods.bean.WxbGoodSku;
 import com.qianfeng.fxmall.goods.service.IGoodsService;
 import com.qianfeng.fxmall.goods.service.IGoodsSkuService;
 import com.qianfeng.fxmall.goods.service.impl.GoodsServiceImpl;
@@ -15,23 +14,21 @@ import org.apache.commons.fileupload.FileItemStream;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.fileupload.util.Streams;
-import org.apache.ibatis.annotations.Param;
 import org.apache.log4j.Logger;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
 public class GoodsServlet extends BaseServlet {
-    private IGoodsService goodsService = new GoodsServiceImpl();
-    private IGoodsSkuService goodsSkuService = new GoodsSkuServiceImpl();
+    final ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("spring.xml");
+    private IGoodsService goodsService = classPathXmlApplicationContext.getBean(GoodsServiceImpl.class);
+    private IGoodsSkuService goodsSkuService = classPathXmlApplicationContext.getBean(IGoodsSkuService.class);
     private static Logger logger = Logger.getLogger(GoodsServlet.class);
     public static final String ENCODING = "UTF-8";
     /**
