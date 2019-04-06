@@ -11,7 +11,7 @@ public class Test {
         final ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("spring.xml");
         IGoodsDao bean = classPathXmlApplicationContext.getBean(IGoodsDao.class);
         List<WxbGood> goodList = bean.queryAllGoods();
-        goodList.forEach((p)-> System.out.println(p));
+        //goodList.forEach((p)-> System.out.println(p));
     }
 
 }

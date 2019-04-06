@@ -1,36 +1,31 @@
 package com.qianfeng.fxmall.goods.controller;
 
+
 import com.qianfeng.fxmall.commons.info.Constants;
 import com.qianfeng.fxmall.commons.info.SaveFile;
-import com.qianfeng.fxmall.commons.info.SystemConstantsUtils;
-//import com.qianfeng.fxmall.commons.mybatis.MyBatisSessionFactoryUtils;
+import com.qianfeng.fxmall.commons.utils.ApplicationContextUtils;
 import com.qianfeng.fxmall.goods.bean.WxbGood;
 import com.qianfeng.fxmall.goods.service.IGoodsService;
-import com.qianfeng.fxmall.goods.service.IGoodsSkuService;
 import com.qianfeng.fxmall.goods.service.impl.GoodsServiceImpl;
-import com.qianfeng.fxmall.goods.service.impl.GoodsSkuServiceImpl;
 import org.apache.commons.fileupload.FileItemIterator;
 import org.apache.commons.fileupload.FileItemStream;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.fileupload.util.Streams;
 import org.apache.log4j.Logger;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
+import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
 public class GoodsServlet extends BaseServlet {
-    final ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("spring.xml");
-    private IGoodsService goodsService = classPathXmlApplicationContext.getBean(GoodsServiceImpl.class);
-    private IGoodsSkuService goodsSkuService = classPathXmlApplicationContext.getBean(IGoodsSkuService.class);
+    // ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("spring.xml");
+    //private IGoodsService goodsService = classPathXmlApplicationContext.getBean(GoodsServiceImpl.class);
+    private IGoodsService goodsService = ApplicationContextUtils.getApplicationContext().getBean(GoodsServiceImpl.class);
     private static Logger logger = Logger.getLogger(GoodsServlet.class);
-    public static final String ENCODING = "UTF-8";
     /**
      *
      */
@@ -43,7 +38,7 @@ public class GoodsServlet extends BaseServlet {
             List<WxbGood> goodList = goodsService.queryGoodsByPage(Integer.parseInt(pageStr));
             List<WxbGood> allGoods = goodsService.queryAllGoods();
             int pageCount = allGoods.size();
-            int size = SystemConstantsUtils.Page.PAGE_SIZE;
+            int size = Constants.Page.PAGE_SIZE;
             int pages = 0;
             if (pageCount % size == 0) {
                 pages = pageCount / size;

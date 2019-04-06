@@ -2,17 +2,17 @@ package com.qianfeng.fxmall.goods.service.impl;
 
 
 import com.qianfeng.fxmall.goods.bean.WxbGoodSku;
-import com.qianfeng.fxmall.goods.dao.IGoodsSkuDAO;
+import com.qianfeng.fxmall.goods.mapper.GoodsSkuMapper;
 import com.qianfeng.fxmall.goods.service.IGoodsSkuService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class GoodsSkuServiceImpl implements IGoodsSkuService {
     @Autowired
-    private IGoodsSkuDAO goodsSkuDao;
+    private GoodsSkuMapper goodsSkuMapper;
     @Override
     public void insertGoodSku(WxbGoodSku wxbGoodSku) {
-        goodsSkuDao.insertGoodSku(wxbGoodSku);
+        goodsSkuMapper.insertGoodSku(wxbGoodSku);
     }
 }

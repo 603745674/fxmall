@@ -6,11 +6,21 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.qianfeng.fxmall.goods.service.IGoodsService;
 import org.apache.log4j.Logger;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class BaseServlet extends HttpServlet{
 	private Logger logger = Logger.getLogger(BaseServlet.class);
-	
+    private static IGoodsService goodsService;
+
+/*    protected static ClassPathXmlApplicationContext applicationContext;
+
+    static {
+        System.out.println(">>>>>>>初始化Spring容器>>>>>>>>>>>");
+        applicationContext = new ClassPathXmlApplicationContext("spring.xml");
+    }*/
 	/**
 	 * 
 	 */

@@ -1,7 +1,7 @@
 package com.qianfeng.fxmall.goods.dao.impl;
 
-import com.qianfeng.fxmall.goods.bean.WxbGoodSku;
 import com.qianfeng.fxmall.goods.dao.IGoodsSkuDAO;
+import com.qianfeng.fxmall.goods.bean.WxbGoodSku;
 import com.qianfeng.fxmall.goods.mapper.GoodsSkuMapper;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
