@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qianfeng.fxmall.goods.mapper.GoodsSkuMapper">
+    <resultMap id="selectAll" type="com.qianfeng.fxmall.goods.bean.WxbGoodSku">
+        <result property="skuId" column="sku_id" javaType="java.lang.String"/>
+        <result property="skuName" column="sku_name" javaType="java.lang.String"/>
+        <result property="skuCost" column="sku_cost" javaType="java.lang.String"/>
+        <result property="skuPrice" column="sku_price" javaType="java.lang.String"/>
+        <result property="skuPmoney" column="sku_pmoney" javaType="java.lang.String"/>
+        <result property="goodId" column="good_id" javaType="java.lang.String"/>
+        <result property="orderNo" column="order_no" javaType="java.lang.Long"/>
+        <result property="serviceMoney" column="service_money" javaType="java.lang.String"/>
+    </resultMap>
+    <resultMap id="GoodsAndSku" type="com.qianfeng.fxmall.goods.bean.WxbGoodSku">
+        <result property="skuId" column="sku_id" javaType="java.lang.String"/>
+        <result property="skuName" column="sku_name" javaType="java.lang.String"/>
+        <result property="skuCost" column="sku_cost" javaType="java.lang.String"/>
+        <result property="skuPrice" column="sku_price" javaType="java.lang.String"/>
+        <result property="skuPmoney" column="sku_pmoney" javaType="java.lang.String"/>
+        <result property="goodId" column="good_id" javaType="java.lang.String"/>
+        <result property="orderNo" column="order_no" javaType="java.lang.Long"/>
+        <result property="serviceMoney" column="service_money" javaType="java.lang.String"/>
+        <association property="wxbGood" javaType="com.qianfeng.fxmall.goods.bean.WxbGood"/>
+    </resultMap>
+    <select id="selectAll" resultMap="selectAll">
+        select * from wxb_good_sku
+    </select>
+    <select id="selectGoodsAndSkuByGoodId" resultMap="GoodsAndSku">
+         select * from  wxb_good g join wxb_good_sku s on g.good_id=s.good_id where g.good_id = #{goodId}
+    </select>
+    <sql id="params">
+         sku_id,sku_name,sku_cost,sku_price,sku_pmoney,good_id,service_money
+    </sql>
+
+    <sql id="param">
+        #{skuId},#{skuName},#{skuCost},#{skuPrice}, #{skuPmoney},#{goodId},#{serviceMoney}
+    </sql>
+
+    <insert id="insertGoodSku">
+        insert into wxb_good_sku (<include refid="params"/>) values (<include refid="param"/>)
+    </insert>
+</mapper>
