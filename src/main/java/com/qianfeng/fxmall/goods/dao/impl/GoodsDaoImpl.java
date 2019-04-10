@@ -37,6 +37,14 @@ public class GoodsDaoImpl implements IGoodsDao {
         session.commit();
     }
 
+    @Override
+    public WxbGood queryGoodInfoById(String goodId) {
+        GoodsMapper mapper = session.getMapper(GoodsMapper.class);
+        WxbGood good = mapper.queryGoodInfoById(goodId);
+
+        return good;
+    }
+
 
     @Override
     public List<WxbGood> queryGoodsByPage(Integer page) {

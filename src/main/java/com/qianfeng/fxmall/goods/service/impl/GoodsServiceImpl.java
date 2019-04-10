@@ -21,6 +21,12 @@ public class GoodsServiceImpl implements IGoodsService {
     }
 
     @Override
+    public WxbGood queryGoodInfoById(String goodId) {
+        WxbGood good = goodsMapper.queryGoodInfoById(goodId);
+        return good;
+    }
+
+    @Override
     public List<WxbGood> queryGoodsByPage(Integer page){
         if(page<1){
             throw  new IndexOutOfBoundsException("页码不能小于1");

@@ -12,7 +12,7 @@ import org.apache.log4j.Logger;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class BaseServlet extends HttpServlet{
-	private Logger logger = Logger.getLogger(BaseServlet.class);
+	//private Logger logger = Logger.getLogger(BaseServlet.class);
     private static IGoodsService goodsService;
 
 /*    protected static ClassPathXmlApplicationContext applicationContext;
@@ -31,14 +31,14 @@ public class BaseServlet extends HttpServlet{
         resp.setCharacterEncoding("UTF-8");
         //获得方法名
         String m = req.getParameter("m");
-        logger.info("执行了方法:"+m);
+       // logger.info("执行了方法:"+m);
         //通过反射获得方法
         try {
             Method method = getClass().getMethod(m, HttpServletRequest.class,HttpServletResponse.class);
-            logger.info("开始方法:"+m);
+            //logger.info("开始方法:"+m);
             //调用方法
             method.invoke(this,req, resp);
-            logger.info("结束方法:"+m);
+           // logger.info("结束方法:"+m);
         } catch (Exception e) {
             e.printStackTrace();
         }

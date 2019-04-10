@@ -22,6 +22,9 @@
     <mappers>
         <mapper resource="mapper/goods.mapper.xml"/>
         <mapper resource="mapper/goodsSku.mapper.xml"/>
+        <mapper resource="mapper/user.mapper.xml"/>
+        <mapper resource="mapper/WxbMemeber.mapper.xml"/>
+
     </mappers>
 
 

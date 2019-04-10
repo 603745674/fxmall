@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qianfeng.fxmall.users.mapper.UserMapper">
+    <resultMap id="baseMapper" type="com.qianfeng.fxmall.users.po.UserInfo">
+        <id property="userId" column="user_id" javaType="java.lang.String"/>
+        <result property="userName" column="user_name" javaType="java.lang.String"/>
+        <result property="userType" column="user_type" javaType="java.lang.String"/>
+        <result property="loginTime" column="login_time" javaType="java.sql.Timestamp"/>
+        <result property="roleId" column="role_id" javaType="java.lang.String"/>
+    </resultMap>
+    <select id="checkUserName" resultMap="baseMapper">
+        select user_name,password from user_info where user_name=#{userName};
+    </select>
+</mapper>

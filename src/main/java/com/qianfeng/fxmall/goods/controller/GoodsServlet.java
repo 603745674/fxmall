@@ -24,14 +24,14 @@ import java.util.UUID;
 public class GoodsServlet extends BaseServlet {
     // ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("spring.xml");
     //private IGoodsService goodsService = classPathXmlApplicationContext.getBean(GoodsServiceImpl.class);
-    private IGoodsService goodsService = ApplicationContextUtils.getApplicationContext().getBean(GoodsServiceImpl.class);
-    private static Logger logger = Logger.getLogger(GoodsServlet.class);
+    private IGoodsService goodsService = (IGoodsService) ApplicationContextUtils.getApplicationContext().getBean("goodsServiceImpl");
+    //private static Logger logger = Logger.getLogger(GoodsServlet.class);
     /**
      *
      */
     private static final long serialVersionUID = 1L;
 
-    public void login(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void AllGoods(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String pageStr = req.getParameter("page");
         try {
             pageStr = pageStr == null ? "1" : pageStr;
@@ -140,7 +140,7 @@ public class GoodsServlet extends BaseServlet {
                             switch (item.getFieldName()) {
                                 case "uploadGood":
                                     carImg = filename;
-                                    logger.info("carImg1文件：" + filename);
+                                   // logger.info("carImg1文件：" + filename);
                                     if(i==0){
                                         wxbGood.setGoodPic(SaveFile.saveFile(item.openStream(), carImg));
                                     }
@@ -232,5 +232,14 @@ public class GoodsServlet extends BaseServlet {
             req.getRequestDispatcher("goods.do?m=login").forward(req, resp);
         }
 
+    }
+
+
+
+    public void queryGoodInfoById(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String goodId = req.getParameter("goodId");
+        WxbGood good = goodsService.queryGoodInfoById(goodId);
+        req.getSession().setAttribute("good",good);
+        req.getRequestDispatcher("goodsInfoList.jsp").forward(req,resp);
     }
 }
