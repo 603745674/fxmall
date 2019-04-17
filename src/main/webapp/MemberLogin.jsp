@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<!-- saved from url=(0032)http://localhost:8081/user/login -->
+<!-- saved from url=(0032)http://192.168.53.20:8081/user/login -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
@@ -10,8 +10,8 @@
     <meta property="qc:admins" content="4441727777670263757">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="http://localhost:8081/wxb/images/favicon.ico">
-    <link rel="icon" type="image/gif" href="http://localhost:8081/wxb/images/favicon.gif">
+    <link rel="shortcut icon" href="http://192.168.53.20:8081/wxb/images/favicon.ico">
+    <link rel="icon" type="image/gif" href="http://192.168.53.20:8081/wxb/images/favicon.gif">
     <link rel="stylesheet" type="text/css" href="./static/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./static/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./static/style-metronic.css">
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="./static/jquery.validate.min.js"></script>
     <script type="text/javascript" src="./static/additional-methods.min.js"></script>
     <script>
-        var SITE_PUBLIC='http://localhost:8081/';
+        var SITE_PUBLIC='http://192.168.53.20:8081/';
         var SITE_UPLOAD='/files/';
     </script>
 </head>
@@ -45,7 +45,7 @@
 <div class="header signup-header">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="http://localhost:8081/user/index" "="">
+            <a class="navbar-brand" href="http://192.168.53.20:8081/user/index" "="">
             <img src="./static/logo.png" id="logoimg" alt="logo">
             </a>
         </div>
@@ -106,7 +106,7 @@
                     <div class="form-group">
                         <%--<span id="submit" class="btn btn-info login-btn"> 登&nbsp;&nbsp;录 </span>--%>
                         <input type="button" id="submit" class="btn btn-info login-btn" onclick="login()" value="登录"/>
-                        <a href="http://localhost:8081/user/register" class="btn btn-yellow register-btn"> 注&nbsp;&nbsp;册 </a>
+                        <a href="http://192.168.53.20:8081/user/register" class="btn btn-yellow register-btn"> 注&nbsp;&nbsp;册 </a>
                     </div>            </form>
             </div>
             <div class="banner-wrap">
@@ -116,7 +116,7 @@
                     <img class="b2_bottom" src="./static/2_bottom.png" alt="">
                     <li style="color:#177EC1">
                         <b>
-                            <a class="zt_link" href="http://localhost:8081/user/login#" onclick="javascript:if(confirm( &#39;即将推出 敬请期待&#39;)) href= &#39;#&#39;;"></a>
+                            <a class="zt_link" href="http://192.168.53.20:8081/user/login#" onclick="javascript:if(confirm( &#39;即将推出 敬请期待&#39;)) href= &#39;#&#39;;"></a>
                         </b>
                     </li>
 
@@ -130,7 +130,7 @@
                     <img class="b3_word" src="./static/3_word.png" alt="">
                     <img class="b3_human" src="./static/3_human.png" alt="">
                     <img class="b3_ufo" src="./static/3_ufo.png" alt="">
-                    <a class="banner_download_link" target="_blank" href="http://localhost:8081/user/register"></a>
+                    <a class="banner_download_link" target="_blank" href="http://192.168.53.20:8081/user/register"></a>
                 </div>
             </div>
             <ul class="banner-nav">
@@ -257,7 +257,7 @@
 
     <div id="joinUs">
         <div id="joinUsBox" class="w1000">
-            <a class="btn btn-blue index-join-us-btn" href="http://localhost:8081/user/register">立即注册</a>
+            <a class="btn btn-blue index-join-us-btn" href="http://192.168.53.20:8081/user/register">立即注册</a>
             <p class="step4"></p>
         </div>
     </div>

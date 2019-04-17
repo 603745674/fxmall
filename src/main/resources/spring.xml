@@ -4,12 +4,14 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 
-    <context:component-scan base-package="com.qianfeng.fxmall.goods.service.impl,com.qianfeng.fxmall.commons.spring,com.qianfeng.fxmall.users.service,com.qianfeng.fxmall.users.controller"/>
-
+    <context:component-scan base-package="com.qianfeng.fxmall.goods.service,com.qianfeng.fxmall.goods.service.impl,com.qianfeng.fxmall.commons.spring,com.qianfeng.fxmall.users.service,com.qianfeng.fxmall.users.controller,com.qianfeng.fxmall.upload"/>
+    <mvc:default-servlet-handler/>
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
     <bean id="dataSources" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="driverClass" value="com.mysql.jdbc.Driver"/>
         <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/fxmall?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8"/>
@@ -26,8 +28,29 @@
         <property name="basePackage" value="com.qianfeng.fxmall.goods.mapper,com.qianfeng.fxmall.users.mapper"/>
     </bean>
 
-    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
-    <mvc:annotation-driven></mvc:annotation-driven>
-    <mvc:default-servlet-handler/>
+
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                <property name="objectMapper" ref="objectMapper"/>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <bean id="objectMapper" class="org.springframework.http.converter.json.Jackson2ObjectMapperFactoryBean"
+          p:indentOutput="true"
+          p:simpleDateFormat="yyyy-MM-dd"/>
+
+
+
+    <!--上传配置-->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+
+        <!--设置上传文件的最大大小，单位byte，比如100000代表100KB-->
+        <!-- one of the properties available; the maximum file size in bytes -->
+        <property name="maxUploadSize" value="5000000"/>
+
+    </bean>
 
 </beans>

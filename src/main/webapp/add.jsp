@@ -1,3 +1,4 @@
+
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -7,15 +8,15 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<!-- saved from url=(0036)http://localhost:8081/cust/goods/add -->
+<!-- saved from url=(0036)http://192.168.53.20:8081/cust/goods/add -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link href="./static/default.css" rel="stylesheet" id="lhgdialoglink">
 
     <title>商品管理</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- head start-->
 
-    <link rel="shortcut icon" href="http://localhost:8080/wxb/images/favicon.ico">
-    <link rel="icon" type="image/gif" href="http://localhost:8081/wxb/images/favicon.gif">
+    <link rel="shortcut icon" href="http://192.168.53.20:8080/wxb/images/favicon.ico">
+    <link rel="icon" type="image/gif" href="http://192.168.53.20:8081/wxb/images/favicon.gif">
     <link href="./static/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./static/font-awesome.min.css">
     <!--[if IE 7]>
@@ -58,7 +59,7 @@
 
     <div class="navbar-container" id="navbar-container">
         <div class="navbar-header pull-left">
-            <a href="http://localhost:8081/cust/index" class="navbar-brand">
+            <a href="http://192.168.53.20:8081/cust/index" class="navbar-brand">
                 <small>
                     <i class="icon-leaf"></i>
                     微信公众号盈利平台-商户后台管理
@@ -70,7 +71,7 @@
             <ul class="nav ace-nav">
 
                 <li class="light-blue">
-                    <a data-toggle="dropdown" href="http://localhost:8081/cust/goods/add#" class="dropdown-toggle">
+                    <a data-toggle="dropdown" href="http://192.168.53.20:8081/cust/goods/add#" class="dropdown-toggle">
                         <img class="nav-user-photo" src="./static/user.jpg" alt="Jason's Photo">
                         <span class="user-info">
 									<small>欢迎您,</small>
@@ -82,14 +83,14 @@
 
                     <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
-                            <a href="http://localhost:8081/cust/chpwd">
+                            <a href="http://192.168.53.20:8081/cust/chpwd">
                                 <i class="icon-cog"></i>
                                 修改密码
                             </a>
                         </li>
 
                         <li>
-                            <a href="http://localhost:8081/cust/setting">
+                            <a href="http://192.168.53.20:8081/cust/setting">
                                 <i class="icon-user"></i>
                                 个人资料
                             </a>
@@ -98,7 +99,7 @@
                         <li class="divider"></li>
 
                         <li>
-                            <a href="http://localhost:8081/cust/logout">
+                            <a href="http://192.168.53.20:8081/cust/logout">
                                 <i class="icon-off"></i>
                                 退出登录
                             </a>
@@ -117,7 +118,7 @@
     </script>
 
     <div class="main-container-inner">
-        <a class="menu-toggler" id="menu-toggler" href="http://localhost:8081/cust/goods/add#">
+        <a class="menu-toggler" id="menu-toggler" href="http://192.168.53.20:8081/cust/goods/add#">
             <span class="menu-text"></span>
         </a>
 
@@ -161,14 +162,14 @@
 
             <ul class="nav nav-list">
                 <li>
-                    <a href="http://localhost:8081/cust/index">
+                    <a href="http://192.168.53.20:8081/cust/index">
                         <i class="icon-home"></i>
                         <span class="menu-text"> 系统首页 </span>
                     </a>
                 </li>
 
                 <li class="active open">
-                    <a href="http://localhost:8081/cust/goods/add#" class="dropdown-toggle">
+                    <a href="http://192.168.53.20:8081/cust/goods/add#" class="dropdown-toggle">
                         <i class="icon-list"></i>
                         <span class="menu-text"> 商品管理 </span>
 
@@ -177,41 +178,41 @@
 
                     <ul class="submenu">
                         <li>
-                            <a href="http://localhost:8081/cust/goods/list">
+                            <a href="http://192.168.53.20:8081/cust/goods/list">
                                 <i class="icon-double-angle-right"></i>
                                 商品信息
                             </a>
                         </li>
 
                         <li class="active">
-                            <a href="http://localhost:8081/cust/goods/add">
+                            <a href="http://192.168.53.20:8081/cust/goods/add">
                                 <i class="icon-pencil"></i>
                                 增加商品
                             </a>
                         </li>
                         <li>
-                            <a href="http://localhost:8081/cust/goods/copy/list">
+                            <a href="http://192.168.53.20:8081/cust/goods/copy/list">
                                 <i class="icon-double-angle-right"></i>
                                 商品文案
                             </a>
                         </li>
 
                         <li>
-                            <a href="http://localhost:8081/cust/goods/copy/add?tp=0">
+                            <a href="http://192.168.53.20:8081/cust/goods/copy/add?tp=0">
                                 <i class="icon-pencil"></i>
                                 增加微信文案
                             </a>
                         </li>
 
                         <li>
-                            <a href="http://localhost:8081/cust/goods/copy/add?tp=1">
+                            <a href="http://192.168.53.20:8081/cust/goods/copy/add?tp=1">
                                 <i class="icon-pencil"></i>
                                 增加站内文案
                             </a>
                         </li>
 
                         <li>
-                            <a href="http://localhost:8081/cust/goods/copy/add?tp=2">
+                            <a href="http://192.168.53.20:8081/cust/goods/copy/add?tp=2">
                                 <i class="icon-pencil"></i>
                                 增加空间文案
                             </a>
@@ -220,7 +221,7 @@
                 </li>
 
                 <li>
-                    <a href="http://localhost:8081/cust/goods/add#" class="dropdown-toggle">
+                    <a href="http://192.168.53.20:8081/cust/goods/add#" class="dropdown-toggle">
                         <i class="icon-tag"></i>
                         <span class="menu-text"> 订单管理 </span>
 
@@ -230,70 +231,70 @@
                     <ul class="submenu">
 
                         <li>
-                            <a href="http://localhost:8081/cust/order/list">
+                            <a href="http://192.168.53.20:8081/cust/order/list">
                                 <i class="icon-double-angle-right"></i>
                                 全部的订单
                             </a>
                         </li>
 
                         <li>
-                            <a href="http://localhost:8081/cust/order/list/1">
+                            <a href="http://192.168.53.20:8081/cust/order/list/1">
                                 <i class="icon-double-angle-right"></i>
                                 已下单订单
                             </a>
                         </li>
 
                         <li>
-                            <a href="http://localhost:8081/cust/order/list/9">
+                            <a href="http://192.168.53.20:8081/cust/order/list/9">
                                 <i class="icon-double-angle-right"></i>
                                 待跟进订单
                             </a>
                         </li>
 
                         <li>
-                            <a href="http://localhost:8081/cust/order/list/2">
+                            <a href="http://192.168.53.20:8081/cust/order/list/2">
                                 <i class="icon-double-angle-right"></i>
                                 待发货订单
                             </a>
                         </li>
 
                         <li>
-                            <a href="http://localhost:8081/cust/order/list/3">
+                            <a href="http://192.168.53.20:8081/cust/order/list/3">
                                 <i class="icon-double-angle-right"></i>
                                 已取消订单
                             </a>
                         </li>
 
                         <li>
-                            <a href="http://localhost:8081/cust/order/list/4">
+                            <a href="http://192.168.53.20:8081/cust/order/list/4">
                                 <i class="icon-double-angle-right"></i>
                                 已发货订单
                             </a>
                         </li>
 
                         <li>
-                            <a href="http://localhost:8081/cust/order/list/5">
+                            <a href="http://192.168.53.20:8081/cust/order/list/5">
                                 <i class="icon-double-angle-right"></i>
                                 已结算订单
                             </a>
                         </li>
 
                         <li>
-                            <a href="http://localhost:8081/cust/order/list/6">
+                            <a href="http://192.168.53.20:8081/cust/order/list/6">
                                 <i class="icon-double-angle-right"></i>
                                 已拒收订单
                             </a>
                         </li>
 
                         <li>
-                            <a href="http://localhost:8081/cust/order/list/7">
+                            <a href="http://192.168.53.20:8081/cust/order/list/7">
                                 <i class="icon-double-angle-right"></i>
                                 已签收订单
                             </a>
                         </li>
 
                         <li>
-                            <a href="http://localhost:8081/cust/order/list/8">
+                            <a href="http://192.168.53.20:8081/cust/order/list/8">
                                 <i class="icon-double-angle-right"></i>
                                 已退货订单
                             </a>
@@ -304,7 +305,7 @@
 
 
                 <li>
-                    <a href="http://localhost:8081/cust/goods/add#" class="dropdown-toggle">
+                    <a href="http://192.168.53.20:8081/cust/goods/add#" class="dropdown-toggle">
                         <i class="icon-bar-chart"></i>
                         <span class="menu-text"> 统计报表</span>
 
@@ -314,7 +315,7 @@
                     <ul class="submenu">
 
                         <li>
-                            <a href="http://localhost:8081/cust/report/good">
+                            <a href="http://192.168.53.20:8081/cust/report/good">
                                 <i class="icon-double-angle-right"></i>
                                 商品销售统计
                             </a>
@@ -324,7 +325,7 @@
                 </li>
 
                 <li>
-                    <a href="http://localhost:8081/cust/goods/add#" class="dropdown-toggle">
+                    <a href="http://192.168.53.20:8081/cust/goods/add#" class="dropdown-toggle">
                         <i class="icon-credit-card"></i>
 
                         <span class="menu-text">
@@ -337,35 +338,35 @@
                     <ul class="submenu">
 
                         <li>
-                            <a href="http://localhost:8081/cust/order/count/1">
+                            <a href="http://192.168.53.20:8081/cust/order/count/1">
                                 <i class="icon-double-angle-right"></i>
                                 待结算流水
                             </a>
                         </li>
 
                         <li>
-                            <a href="http://localhost:8081/cust/order/count/2">
+                            <a href="http://192.168.53.20:8081/cust/order/count/2">
                                 <i class="icon-double-angle-right"></i>
                                 已结算流水
                             </a>
                         </li>
 
                         <li>
-                            <a href="http://localhost:8081/cust/order/count/3">
+                            <a href="http://192.168.53.20:8081/cust/order/count/3">
                                 <i class="icon-double-angle-right"></i>
                                 已返款流水
                             </a>
                         </li>
 
                         <li>
-                            <a href="http://localhost:8081/cust/order/money">
+                            <a href="http://192.168.53.20:8081/cust/order/money">
                                 <i class="icon-double-angle-right"></i>
                                 财务返款单
                             </a>
                         </li>
 
                         <li>
-                            <a href="http://localhost:8081/cust/order/paylog">
+                            <a href="http://192.168.53.20:8081/cust/order/paylog">
                                 <i class="icon-double-angle-right"></i>
                                 支付宝记录
                             </a>
@@ -381,7 +382,7 @@
                 </li>
 
                 <li>
-                    <a href="http://localhost:8081/cust/goods/add#" class="dropdown-toggle">
+                    <a href="http://192.168.53.20:8081/cust/goods/add#" class="dropdown-toggle">
                         <i class="icon-group"></i>
 
                         <span class="menu-text">
@@ -393,14 +394,14 @@
 
                     <ul class="submenu">
                         <li>
-                            <a href="http://localhost:8081/cust/setting">
+                            <a href="http://192.168.53.20:8081/cust/setting">
                                 <i class="icon-double-angle-right"></i>
                                 基本信息
                             </a>
                         </li>
 
                         <li>
-                            <a href="http://localhost:8081/cust/chpwd">
+                            <a href="http://192.168.53.20:8081/cust/chpwd">
                                 <i class="icon-double-angle-right"></i>
                                 修改密码
                             </a>
@@ -431,15 +432,15 @@
                 <ul class="breadcrumb">
                     <li>
                         <i class="icon-home home-icon"></i>
-                        <a href="http://localhost:8081/cust/index">首页</a>
+                        <a href="http://192.168.53.20:8081/cust/index">首页</a>
                     </li>
 
                     <li>
-                        <a href="http://localhost:8081/cust/goods/list">商品管理</a>
+                        <a href="http://192.168.53.20:8081/cust/goods/list">商品管理</a>
                     </li>
 
                     <li>
-                        <a href="http://localhost:8081/cust/goods/add">增加商品</a>
+                        <a href="http://192.168.53.20:8081/cust/goods/add">增加商品</a>
                     </li>
 
                 </ul><!-- .breadcrumb -->
@@ -563,7 +564,7 @@
                             <tr>
                                 <td align="right"><strong>图片3预览：</strong></td>
                                 <td>
-                                    <div id="sm_div2">
+                                       <div id="sm_div2">
 
                                         <img src="./static/no_pic.png" id="sm_yl2" style="width:240px;height:150px;border:1px solid #ddd;">
 
@@ -610,7 +611,7 @@
                                         <button class="btn btn-sm btn-danger" onclick="del_row($VD('tcbg'));return false;">
                                             <i class="icon-trash"></i>
                                             删除
-                                      </button>
+                                        </button>
                                         (<font color="red">提示信息：</font>上述所有输入项均为必填项目，请务必填入相应值后保存！)
                                     </div>
                                 </td>
@@ -666,7 +667,7 @@
 
 
                                     <input type="checkbox" class="ace" id="copy_1887427" name="gcopy" value="1887427">
-                                    <span class="lbl">&nbsp;<a href="http://localhost:8081/cust/goods/add#">11</a></span><br>
+                                    <span class="lbl">&nbsp;<a href="http://192.168.53.20:8081/cust/goods/add#">11</a></span><br>
 
 
 
@@ -687,7 +688,7 @@
 
 
                                     <input type="checkbox" class="ace" id="copy_39201701" name="zcopy_id" value="39201701">
-                                    <span class="lbl">&nbsp;<a href="http://localhost:8081/cust/goods/add#">12</a></span><br>
+                                    <span class="lbl">&nbsp;<a href="http://192.168.53.20:8081/cust/goods/add#">12</a></span><br>
 
 
 
@@ -730,7 +731,7 @@
 
     </div><!-- /.main-container-inner -->
 
-    <a href="http://localhost:8081/cust/goods/add#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+    <a href="http://192.168.53.20:8081/cust/goods/add#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
         <i class="icon-double-angle-up icon-only bigger-110"></i>
     </a>
 </div><!-- /.main-container -->
@@ -799,10 +800,8 @@
         config['okVal'] = '确定';
         config['cancelVal'] = '取消';
     })($.dialog.setting);
-
     // 如果只设置一个或少量全局配置也可这样：
     $.dialog.setting.extendDrag = true;
-
 </script>
 <!-- menu over-->
 
@@ -819,106 +818,83 @@
             $.dialog.alert("对不起！商品名称不能为空！");
             return false;
         }
-
         if(isNull($("#type_id").val())){
             $.dialog.alert("对不起！请选择商户分类！");
             return false;
         }
-
         if(isNull($("#promote_desc").val())){
             $.dialog.alert("对不起！推广说明不能为空！");
             return false;
         }
-
         if(isNull(copy_ids)){
             $.dialog.alert("对不起！请选择微信文案！");
             return false;
         }
-
         /*if(isNull(spc_id)){
           $.dialog.alert("对不起！请选择站内文案！",null,false);
           return false;
         }*/
-
         if(isNull($("#order_no").val())){
             $.dialog.alert("对不起！排序编号不能为空！");
             return false;
         }
-
         //处理sku
         var tab_rows = document.getElementById('tcbg').rows.length
         if(tab_rows==1){
             $.dialog.alert("对不起！请先设置商品套餐！");
             return false;
         }
-
         var ms="";
         var cb="";
         var jg="";
         var fc="";
         var kffc="";
         for(var i=0;i<tab_rows-1;i++){
-
             if(!isNull($("#sku"+(i+1)).val())){
                 ms += $("#sku"+(i+1)).val()+"|";
             }
-
             if(!isNull($("#cb"+(i+1)).val())){
                 cb += $("#cb"+(i+1)).val()+"|";
             }
-
             if(!isNull($("#jg"+(i+1)).val())){
                 jg += $("#jg"+(i+1)).val()+"|";
             }
-
             if(!isNull($("#fc"+(i+1)).val())){
                 fc += $("#fc"+(i+1)).val()+"|";
             }
-
             if(!isNull($("#kffc"+(i+1)).val())){
                 kffc += $("#kffc"+(i+1)).val()+"|";
             }
-
         }
-
         var sku_str="";
         for(var i=0;i<tab_rows-1;i++){
-
             if(!isNull($("#sku_id_"+(i+1)).val())){
                 sku_str += $("#sku_id_"+(i+1)).val()+"|";
             }else{
                 sku_str += "newid|";
             }
-
             if(!isNull($("#sku"+(i+1)).val())){
                 sku_str += $("#sku"+(i+1)).val()+"|";
             }
-
             if(!isNull($("#cb"+(i+1)).val())){
                 sku_str += $("#cb"+(i+1)).val()+"|";
             }
-
             if(!isNull($("#jg"+(i+1)).val())){
                 sku_str += $("#jg"+(i+1)).val()+"|";
             }
-
             if(!isNull($("#fc"+(i+1)).val())){
                 sku_str += $("#fc"+(i+1)).val()+"|";
             }
-
             if(!isNull($("#kffc"+(i+1)).val())){
                 sku_str += $("#kffc"+(i+1)).val()+"|";
             }
-
             sku_str +="$";
         }
-
         //验证商品是否已经存在
         if(checkGoodName($("#good_name").val(),gid)=='true'){
             $.dialog.alert("对不起！您已经录入同名的商品了！");
             return false;
         }
-
         $.dialog.confirm('你确定要提交数据吗？', function(){
             $.dialog.tips('数据保存中...',600,'loading.gif');
             var sform = document.copy_form;
@@ -933,21 +909,17 @@
                 $('#copy_id').val(copy_ids);
                 $('#spc_id').val(spc_ids);
                 $('#zon_id').val(zon_ids);
-
                 setTimeout(function(){
                     sform.submit();
                 },500);
             }
         });
-
     }
-
     //验证商户是否在使用
     function checkGoodName(name,gid){
         var param = "good_id="+gid+"&good_name="+name+"&now="+new Date().getTime();
         return commonLoad("cust/goods/check",param,"post");
     }
-
     var tags = "";
     if(tags!=""){
         var com_obj = document.getElementsByName("tags");
@@ -956,11 +928,9 @@
                 com_obj[j].checked = true;
             }else{
                 com_obj[j].checked = false;
-
             }
         }
     }
-
     var copys = "";
     if(copys!=""){
         var com_obj = document.getElementsByName("gcopy");
@@ -972,7 +942,6 @@
             }
         }
     }
-
     var spc_ids = "";
     if(spc_ids!=""){
         var com_obj = document.getElementsByName("scopy_id");
@@ -984,7 +953,6 @@
             }
         }
     }
-
     var zon_ids = "";
     if(zon_ids!=""){
         var com_obj = document.getElementsByName("zcopy_id");
@@ -996,9 +964,9 @@
             }
         }
     }
-
 </script>
 
 
 
 <div id="ldg_dragmask" style="display: none; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; cursor: move; opacity: 0; background: rgb(255, 255, 255); pointer-events: none;"></div><div><div id="maskLevel" style="position:absolute;top:0;left:0;display:none;text-align:center;z-index:10000;"></div><div id="ym-window" style="position:absolute;z-index:10001;display:none"><div class="ym-tl" id="ym-tl"><div class="ym-tr"><div class="ym-tc" style="cursor:move;"><div class="ym-header-text"></div><div class="ym-header-tools"></div></div></div></div><div class="ym-ml" id="ym-ml"><div class="ym-mr"><div class="ym-mc"><div class="ym-body"></div></div></div></div><div class="ym-ml" id="ym-btnl"><div class="ym-mr"><div class="ym-btn"></div></div></div><div class="ym-bl" id="ym-bl"><div class="ym-br"><div class="ym-bc"></div></div></div></div></div></body></html>
+

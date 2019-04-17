@@ -3,17 +3,14 @@ package com.qianfeng.fxmall.users.controller;
 
 import com.qianfeng.fxmall.commons.exception.PasswordErrorException;
 import com.qianfeng.fxmall.commons.exception.UsernameNotFoundException;
-import com.qianfeng.fxmall.users.po.UserInfo;
 import com.qianfeng.fxmall.users.po.WxbMemeber;
 import com.qianfeng.fxmall.users.service.WxbMemeberService;
 import com.qianfeng.fxmall.users.vo.JsonResultVO;
-import com.qianfeng.fxmall.users.vo.UserLoginVO;
 import com.qianfeng.fxmall.users.vo.WxbMemeberLoginVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import javax.servlet.http.HttpSession;
 
 @Controller

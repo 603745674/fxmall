@@ -522,7 +522,7 @@
                                 <td>
                                     <div id="sm_div">
 
-                                        <img id="sm_yl" style="width:240px;height:150px;border:1px solid #ddd;" src="http://localhost:8080/brands_img/${good.goodPic}"/>
+                                        <img id="sm_yl" style="width:240px;height:150px;border:1px solid #ddd;" src="${good.goodPic}"/>
 
 
                                     </div>
@@ -540,7 +540,7 @@
                                 <td>
                                     <div id="sm_div1">
 
-                                        <img id="sm_yl" style="width:240px;height:150px;border:1px solid #ddd;" src="http://localhost:8080/brands_img/${good.goodPic1}"/>
+                                        <img id="sm_yl" style="width:240px;height:150px;border:1px solid #ddd;" src="${good.goodPic1}"/>
 
 
                                     </div>
@@ -558,7 +558,7 @@
                                 <td>
                                     <div id="sm_div2">
 
-                                        <img id="sm_yl" style="width:240px;height:150px;border:1px solid #ddd;" src="http://localhost:8080/brands_img/${good.goodPic2}"/>
+                                        <img id="sm_yl" style="width:240px;height:150px;border:1px solid #ddd;" src="${good.goodPic2}"/>
 
 
                                     </div>

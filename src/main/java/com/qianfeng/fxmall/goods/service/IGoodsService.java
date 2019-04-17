@@ -1,6 +1,7 @@
 package com.qianfeng.fxmall.goods.service;
 
 import com.qianfeng.fxmall.goods.bean.WxbGood;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 

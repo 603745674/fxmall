@@ -27,8 +27,8 @@ public class UserService {
         if(userInfo==null){
             throw new UsernameNotFoundException();
         }
-
         String md5Username = MD5Utils.md5(password,"LL");
+        System.out.println(md5Username);
         if(!md5Username.equals(userInfo.getPassword())){
             throw new PasswordErrorException("password is error");
         }

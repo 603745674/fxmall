@@ -24,7 +24,7 @@
         <mapper resource="mapper/goodsSku.mapper.xml"/>
         <mapper resource="mapper/user.mapper.xml"/>
         <mapper resource="mapper/WxbMemeber.mapper.xml"/>
-
+        <mapper resource="mapper/images.mapper.xml"/>
     </mappers>
 
 

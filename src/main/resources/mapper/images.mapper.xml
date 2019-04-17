@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qianfeng.fxmall.users.mapper.ImgMapper">
+    <resultMap id="baseResult" type="com.qianfeng.fxmall.users.po.TbImages">
+        <id property="imgId" column="img_id" javaType="java.lang.Integer"/>
+        <result property="imgUrl" column="img_url" javaType="java.lang.String"/>
+        <result property="imgMd5" column="img_md5" javaType="java.lang.String"/>
+    </resultMap>
+    <select id="queryImgByMD5" resultMap="baseResult">
+        select img_id,img_url,img_md5 from tb_images where img_md5=#{imgMd5}
+    </select>
+    <insert id="insertImg">
+        insert into tb_images (img_url,img_md5) values (#{imgUrl},#{imgMd5})
+    </insert>
+</mapper>
